@@ -29,6 +29,8 @@ Route::group(['prefix' => 'api'], function () {
     Route::post('retourne_service','GoogleMapsCtrl@retourne_service');
     Route::post('register','CompteCtrl@register');
     Route::post('update_services_kiosque','KiosqueServiceCtrl@update_services_kiosque');
+    /*ici nous devons faire une route qui recupere la liste des services avec les logo associees*/
+    Route::get('service_logo','ServiceController@service_logo');
 });
 
 Route::group(['prefix' => 'api'], function()

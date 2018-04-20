@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Upload;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -95,5 +96,20 @@ class serviceController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function service_logo(){
+        //on recupere la liste des services avec les logo associe a chaque service
+        $service = \App\Service::get();
+
+        foreach($service as $key=>$value){
+            //
+            // return $icone_localisation;
+            $logo = Upload::find($value->logo);
+            $img = $logo->path();
+            $service[$key]['lien_logo']= $img;
+
+        }
+        return $service;
     }
 }
