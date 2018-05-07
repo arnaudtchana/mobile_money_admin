@@ -6,7 +6,6 @@
 
 namespace App;
 
-use App\Traits\RestTrait;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
@@ -21,7 +20,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
 {
     use Authenticatable, CanResetPassword;
     // use SoftDeletes;
-    use EntrustUserTrait,RestTrait;
+    use EntrustUserTrait;
 
     protected $table = 'users';
 	
@@ -31,7 +30,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      * @var array
      */
 	protected $fillable = [
-		'name', 'email', 'password', "role", "context_id", "type","username"
+		'name', 'email', 'password', "role", "context_id", "type"
 	];
 	
 	/**

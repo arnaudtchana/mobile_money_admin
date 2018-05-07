@@ -20,7 +20,7 @@ class CreateServicesTable extends Migration
         Module::generate("Services", 'services', 'localisation_icone', 'fa-cube', [
             ["nom", "nom", "String", false, "", 0, 256, true],
             ["description", "description", "Textarea", false, "", 0, 0, false],
-            ["logo", "logo", "Files", false, "", 0, 0, false],
+            ["logo", "logo", "File", false, "", 0, 0, false],
             ["localisation_icone", "Icone  localisation", "File", false, "", 0, 0, false],
         ]);
 		

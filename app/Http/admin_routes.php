@@ -70,16 +70,4 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	Route::get(config('laraadmin.adminRoute') . '/backup_dt_ajax', 'LA\BackupsController@dtajax');
 	Route::post(config('laraadmin.adminRoute') . '/create_backup_ajax', 'LA\BackupsController@create_backup_ajax');
 	Route::get(config('laraadmin.adminRoute') . '/downloadBackup/{id}', 'LA\BackupsController@downloadBackup');
-
-	/* ================== Services ================== */
-	Route::resource(config('laraadmin.adminRoute') . '/services', 'LA\ServicesController');
-	Route::get(config('laraadmin.adminRoute') . '/service_dt_ajax', 'LA\ServicesController@dtajax');
-
-	/* ================== Kiosques ================== */
-	Route::resource(config('laraadmin.adminRoute') . '/kiosques', 'LA\KiosquesController');
-	Route::get(config('laraadmin.adminRoute') . '/kiosque_dt_ajax', 'LA\KiosquesController@dtajax');
-
-	/* ================== Persons ================== */
-	Route::resource(config('laraadmin.adminRoute') . '/persons', 'LA\PersonsController');
-	Route::get(config('laraadmin.adminRoute') . '/person_dt_ajax', 'LA\PersonsController@dtajax');
 });
