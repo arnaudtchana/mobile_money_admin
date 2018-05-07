@@ -17,7 +17,7 @@ class CreateServicesTable extends Migration
      */
     public function up()
     {
-        Module::generate("Services", 'services', 'localisation_icone', 'fa-cube', [
+        Module::generate("Services", 'services', 'logo', 'fa-cube', [
             ["nom", "nom", "String", false, "", 0, 256, true],
             ["description", "description", "Textarea", false, "", 0, 0, false],
             ["logo", "logo", "File", false, "", 0, 0, false],
