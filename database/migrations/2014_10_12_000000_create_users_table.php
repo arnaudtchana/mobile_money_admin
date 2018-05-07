@@ -17,12 +17,11 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Module::generate("Users", 'users', 'name', 'fa-group', [
-            ["name", "Name", "Name", false, "", 5, 250, false],
-            ["context_id", "Context", "Integer", false, "0", 0, 0, false],
+        Module::generate("Users", 'users', 'type', 'fa-group', [
+            ["name", "Name", "Name", false, "", 5, 250, true],
             ["email", "Email", "Email", true, "", 0, 250, false],
             ["password", "Password", "Password", false, "", 6, 250, true],
-            ["username", "Identifiant", "String", true, "", 0, 256, true],
+            ["username", "Username", "String", true, "", 0, 256, true],
         ]);
 		
 		/*

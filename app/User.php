@@ -15,13 +15,14 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
 use Illuminate\Database\Eloquent\Model;
 // use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 class User extends Model implements AuthenticatableContract, AuthorizableContract, CanResetPasswordContract
 {
     use Authenticatable, CanResetPassword;
-    // use SoftDeletes;
-    use EntrustUserTrait,RestTrait;
+    //use SoftDeletes;
+    use EntrustUserTrait, RestTrait;
 
     protected $table = 'users';
 	

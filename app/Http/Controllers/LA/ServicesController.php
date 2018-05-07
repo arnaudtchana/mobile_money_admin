@@ -22,7 +22,7 @@ use App\Models\Service;
 class ServicesController extends Controller
 {
 	public $show_action = true;
-	public $view_col = 'localisation_icone';
+	public $view_col = 'logo';
 	public $listing_cols = ['id', 'nom', 'description', 'logo', 'localisation_icone'];
 	
 	public function __construct() {

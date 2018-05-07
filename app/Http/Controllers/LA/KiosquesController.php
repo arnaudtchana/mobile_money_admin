@@ -22,7 +22,7 @@ use App\Models\Kiosque;
 class KiosquesController extends Controller
 {
 	public $show_action = true;
-	public $view_col = 'nom_kiosque';
+	public $view_col = 'statut';
 	public $listing_cols = ['id', 'quartier', 'description', 'ville', 'latitude', 'longitude', 'nom_kiosque', 'user_id', 'statut'];
 	
 	public function __construct() {

@@ -22,7 +22,7 @@ use App\Models\User;
 class UsersController extends Controller
 {
 	public $show_action = true;
-	public $view_col = 'name';
+	public $view_col = 'type';
 	public $listing_cols = ['id', 'name', 'context_id', 'email', 'password', 'username'];
 	
 	public function __construct() {

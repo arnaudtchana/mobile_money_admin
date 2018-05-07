@@ -17,7 +17,7 @@ class CreateKiosquesTable extends Migration
      */
     public function up()
     {
-        Module::generate("Kiosques", 'kiosques', 'nom_kiosque', 'fa-map-marker', [
+        Module::generate("Kiosques", 'kiosques', 'statut', 'fa-map-marker', [
             ["quartier", "Quartier", "String", false, "", 0, 256, false],
             ["description", "Description", "Textarea", false, "", 0, 0, false],
             ["ville", "Ville", "String", false, "", 0, 256, true],
