@@ -4,6 +4,7 @@
  * Help: http://laraadmin.com
  */
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Dwij\Laraadmin\Models\Module;
@@ -22,6 +23,7 @@ class CreateRolesTable extends Migration
             ["display_name", "Display Name", "String", false, "", 0, 250, true],
             ["description", "Description", "Textarea", false, "", 0, 1000, false],
             ["parent", "Parent Role", "Dropdown", false, "1", 0, 0, false, "@roles"],
+            ["dept", "Department", "Dropdown", false, "1", 0, 0, false, "@departments"],
         ]);
 		
 		/*

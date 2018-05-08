@@ -6,7 +6,6 @@
 
 namespace App;
 
-use App\Traits\RestTrait;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
@@ -15,14 +14,13 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
 use Illuminate\Database\Eloquent\Model;
 // use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 class User extends Model implements AuthenticatableContract, AuthorizableContract, CanResetPasswordContract
 {
     use Authenticatable, CanResetPassword;
-    //use SoftDeletes;
-    use EntrustUserTrait, RestTrait;
+    // use SoftDeletes;
+    use EntrustUserTrait;
 
     protected $table = 'users';
 	
@@ -32,7 +30,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      * @var array
      */
 	protected $fillable = [
-		'name', 'email', 'password', "role", "context_id", "type","username"
+		'name', 'email', 'password', "role", "context_id", "type"
 	];
 	
 	/**

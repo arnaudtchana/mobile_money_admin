@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="mobile_money@localhost" uuid="3a72d926-d304-483c-99c5-0f18645706f9">
+    <data-source name="mobile_money@localhost" uuid="10bd7ba1-781d-4955-a77c-86bcb29a8426">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
       <secret-storage>master_key</secret-storage>
       <first-sync>true</first-sync>
-      <user-name>root</user-name>
+      <user-name>homestead</user-name>
     </data-source>
   </component>
 </project>

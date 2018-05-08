@@ -52,28 +52,22 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	Route::get(config('laraadmin.adminRoute') . '/permission_dt_ajax', 'LA\PermissionsController@dtajax');
 	Route::post(config('laraadmin.adminRoute') . '/save_permissions/{id}', 'LA\PermissionsController@save_permissions');
 	
+	/* ================== Departments ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/departments', 'LA\DepartmentsController');
+	Route::get(config('laraadmin.adminRoute') . '/department_dt_ajax', 'LA\DepartmentsController@dtajax');
 	
+	/* ================== Employees ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/employees', 'LA\EmployeesController');
+	Route::get(config('laraadmin.adminRoute') . '/employee_dt_ajax', 'LA\EmployeesController@dtajax');
+	Route::post(config('laraadmin.adminRoute') . '/change_password/{id}', 'LA\EmployeesController@change_password');
 	
+	/* ================== Organizations ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/organizations', 'LA\OrganizationsController');
+	Route::get(config('laraadmin.adminRoute') . '/organization_dt_ajax', 'LA\OrganizationsController@dtajax');
 
 	/* ================== Backups ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/backups', 'LA\BackupsController');
 	Route::get(config('laraadmin.adminRoute') . '/backup_dt_ajax', 'LA\BackupsController@dtajax');
 	Route::post(config('laraadmin.adminRoute') . '/create_backup_ajax', 'LA\BackupsController@create_backup_ajax');
 	Route::get(config('laraadmin.adminRoute') . '/downloadBackup/{id}', 'LA\BackupsController@downloadBackup');
-
-	/* ================== Services ================== */
-	Route::resource(config('laraadmin.adminRoute') . '/services', 'LA\ServicesController');
-	Route::get(config('laraadmin.adminRoute') . '/service_dt_ajax', 'LA\ServicesController@dtajax');
-
-	/* ================== Persons ================== */
-	Route::resource(config('laraadmin.adminRoute') . '/persons', 'LA\PersonsController');
-	Route::get(config('laraadmin.adminRoute') . '/person_dt_ajax', 'LA\PersonsController@dtajax');
-
-	/* ================== Kiosque_services ================== */
-	Route::resource(config('laraadmin.adminRoute') . '/kiosque_services', 'LA\Kiosque_servicesController');
-	Route::get(config('laraadmin.adminRoute') . '/kiosque_service_dt_ajax', 'LA\Kiosque_servicesController@dtajax');
-
-	/* ================== Kiosques ================== */
-	Route::resource(config('laraadmin.adminRoute') . '/kiosques', 'LA\KiosquesController');
-	Route::get(config('laraadmin.adminRoute') . '/kiosque_dt_ajax', 'LA\KiosquesController@dtajax');
 });
